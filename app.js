@@ -26,7 +26,7 @@ function validaCelular(){
 }
 
 function validaCPF(){
-    const regex = ;
+    const regex = /^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/;
     if(regex.test(cpf.value)){
         console.log(cpf.value);
     }else{
@@ -89,6 +89,7 @@ function validaCodigo(){
 
 function validaFormulario(){
     try{
+        validaCPF();
         validaNome();
         validaCelular();
         alert("Dados cadastrados com sucesso!!");
