@@ -35,7 +35,7 @@ function validaCPF(){
 }
 
 function validaEmail(){
-    const regex = ;
+    const regex = /[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+/;
     if(regex.test(email.value)){
         console.log(email.value);
     }else{
@@ -44,7 +44,7 @@ function validaEmail(){
 }
 
 function validaSenha(){
-    const regex = ;
+    const regex = /^(?=.*[A-Z])/;
     if(regex.test(senha.value)){
         console.log(senha.value);
     }else{
@@ -92,6 +92,7 @@ function validaFormulario(){
         validaCPF();
         validaNome();
         validaCelular();
+        validaEmail();
         alert("Dados cadastrados com sucesso!!");
     }catch(erro){
         mensagemErro.innerHTML = erro.message;
