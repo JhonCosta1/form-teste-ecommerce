@@ -17,7 +17,7 @@ function validaNome(){
 }
 
 function validaCelular(){
-    const regex = ;
+    const regex = /\([0-9]{2}\) 9 [0-9]{4}{-}[0-9]{4}$/;
     if(regex.test(celular.value)){
         console.log(celular.value);
     }else{
@@ -90,6 +90,7 @@ function validaCodigo(){
 function validaFormulario(){
     try{
         validaNome();
+        validaCelular();
         alert("Dados cadastrados com sucesso!!");
     }catch(erro){
         mensagemErro.innerHTML = erro.message;
