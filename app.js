@@ -79,7 +79,7 @@ function validaData(){
 }
 
 function validaCodigo(){
-    const regex = ;
+    const regex = /^[0-9]{3}$/;
     if(regex.test(codigoSeg.value)){
         console.log(codigoSeg.value);
     }else{
@@ -94,6 +94,9 @@ function validaFormulario(){
         validaCelular();
         validaEmail();
         validaSenha();
+        validaConfirmaSenha();
+        validaCartao();
+        validaCodigo();
         alert("Dados cadastrados com sucesso!!");
     }catch(erro){
         mensagemErro.innerHTML = erro.message;
