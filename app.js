@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
 })
 
 function validaNome(){
-    //const regex = ;
+    const regex = /^[A-Z][a-z]* [A-Z][a-z]*$/;
     if(regex.test(nome.value)){
         console.log(nome.value); 
     }else{
@@ -17,7 +17,7 @@ function validaNome(){
 }
 
 function validaCelular(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(celular.value)){
         console.log(celular.value);
     }else{
@@ -26,7 +26,7 @@ function validaCelular(){
 }
 
 function validaCPF(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(cpf.value)){
         console.log(cpf.value);
     }else{
@@ -35,7 +35,7 @@ function validaCPF(){
 }
 
 function validaEmail(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(email.value)){
         console.log(email.value);
     }else{
@@ -44,7 +44,7 @@ function validaEmail(){
 }
 
 function validaSenha(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(senha.value)){
         console.log(senha.value);
     }else{
@@ -61,7 +61,7 @@ function validaConfirmaSenha(){
 }
 
 function validaCartao(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(numCartao.value)){
         console.log(numCartao.value);
     }else{
@@ -70,7 +70,7 @@ function validaCartao(){
 }
 
 function validaData(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(dataValidade.value)){
         console.log(dataValidade.value);
     }else{
@@ -79,7 +79,7 @@ function validaData(){
 }
 
 function validaCodigo(){
-    //const regex = ;
+    const regex = ;
     if(regex.test(codigoSeg.value)){
         console.log(codigoSeg.value);
     }else{
@@ -89,6 +89,7 @@ function validaCodigo(){
 
 function validaFormulario(){
     try{
+        validaNome();
         alert("Dados cadastrados com sucesso!!");
     }catch(erro){
         mensagemErro.innerHTML = erro.message;
