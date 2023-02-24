@@ -44,7 +44,7 @@ function validaEmail(){
 }
 
 function validaSenha(){
-    const regex = /^(?=.*[A-Z])/;
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&]).{6,15}$/;
     if(regex.test(senha.value)){
         console.log(senha.value);
     }else{
@@ -93,6 +93,7 @@ function validaFormulario(){
         validaNome();
         validaCelular();
         validaEmail();
+        validaSenha();
         alert("Dados cadastrados com sucesso!!");
     }catch(erro){
         mensagemErro.innerHTML = erro.message;
