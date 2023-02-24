@@ -61,7 +61,7 @@ function validaConfirmaSenha(){
 }
 
 function validaCartao(){
-    const regex = ;
+    const regex = /^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$/;
     if(regex.test(numCartao.value)){
         console.log(numCartao.value);
     }else{
